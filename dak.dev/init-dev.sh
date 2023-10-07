@@ -5,14 +5,7 @@ echo 'export PATH="/srv/dak/bin:${PATH}"' > ~/.bashrc
 echo 'export PATH="/srv/dak/bin:${PATH}"' > /home/dak/.bashrc
 source ~/.bashrc
 
-export ARCH=amd64
-export DISTRO_NAME=KSLinux
-export DISTRO_VERSION="22.04.3"
-export DISTRO_CODENAME=jammy
-export DISTRO_REPO_NAME="$DISTRO_NAME $DISTRO_VERSION"
-export DISTRO_LABEL="KSL_22_04"
-export GPG_KEY="451DD5811062DFC93DF54EEC259531ED17EE37C1"
-export GPG_FILE="/dak.dev/keys/.no-key"
+source /dak.start/env.sh
 
 
 USER_CMD="sudo -E -u dak -s -H"

@@ -1,5 +1,6 @@
 #! /bin/bash
 
+source /dak.start/env.sh
 
 SHOW_PROGRESS(){
  if [ -f /usr/bin/dialog ];then
@@ -23,7 +24,7 @@ USER_CMD="sudo -E -u dak -s -H"
 DAK="$USER_CMD /srv/dak/bin/dak"
 APT="$USER_CMD apt download"
 APTS="$USER_CMD apt source"
-DI="$DAK import -s jammy main "
+DI="$DAK import -s $DISTRO_CODENAME main "
 
 
 cd /home/dak
