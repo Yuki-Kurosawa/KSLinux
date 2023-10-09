@@ -134,7 +134,7 @@ clear
 
 debootstrap --no-check-gpg $DISTRO_CODENAME /test http://localhost/kslinux
 cp -r /test.tmp /test/pkgs
-cp /dak.dev/keys/.no-key.gpg /test/etc/apt/trusted.gpg.d/no-key.gpg
+cp $GPG_FILE /test/etc/apt/trusted.gpg.d/release.gpg
 
 mkdir -p /run/shm
 
